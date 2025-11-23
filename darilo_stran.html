@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+<meta charset="UTF-8">
+<title>Darilo za mojo drago</title>
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    background: #fff0f5;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+h1 {
+    margin-top: 40px;
+    color: #c2185b;
+    font-size: 32px;
+}
+.rose {
+    position: absolute;
+    top: -50px;
+    font-size: 30px;
+    animation: fall 6s linear infinite;
+}
+@keyframes fall {
+    to {
+        transform: translateY(110vh);
+        opacity: 0;
+    }
+}
+.buttons {
+    margin-top: 40px;
+}
+button {
+    padding: 12px 22px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #c2185b;
+    color: white;
+}
+</style>
+</head>
+<body>
+
+<h1>Vse najboljše, draga moja ❤️</h1>
+
+<div class="buttons">
+    <p>Prenesi svoja kupona:</p>
+    <button onclick="window.location.href='kupon1.pdf'">Kupon 1</button>
+    <button onclick="window.location.href='kupon2.pdf'">Kupon 2</button>
+</div>
+
+<script>
+// Create falling roses
+for (let i = 0; i < 25; i++) {
+    let rose = document.createElement("div");
+    rose.className = "rose";
+    rose.style.left = Math.random() * 100 + "vw";
+    rose.style.animationDelay = Math.random() * 5 + "s";
+    rose.innerHTML = "🌹";
+    document.body.appendChild(rose);
+}
+</script>
+
+</body>
+</html>
